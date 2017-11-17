@@ -49,7 +49,12 @@ app.get('/about', (req,res) => {
   });
 });
 
-// /bad send back json with errorMessage
+app.get('/project', (req, res) => {
+  res.render('project.hbs',{
+    pageTitle: 'Project Page',
+    pageMessage: 'Project deployed on this server'
+  });
+});
 
 app.get('/bad', (req, res) => {
   res.send({
